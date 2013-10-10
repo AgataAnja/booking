@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+
+.menu {
+    background-color : #FFEFD5;
+    color : #D2691E;
+    opacity: 1;
+    border: 2px outset #FFE4B5;
+    margin: 0px;
+ 
+    width : 150px;
+    height : auto;
+    position: relative;
+}
+.show {
+    display: '';
+}
+.hide {
+    display: none;
+}
+p:hover {
+	color: #FDF5E6;
+	background-color: #DEB887;
+}
+
+</style>
+</head>
+<body>
+
+<div class='menu hide' id='context-menu' z-index=3>
+    <p id='comp'>open my comp >></p>
+    <p id='copy'>copy</p>
+    <p id='past'>past</p>
+    <p id='cut'>cut</p>
+</div>
+<div class='menu hide' id='disk' z-index=2>
+    <p id='c'>disk C</p>
+    <p id='d'>disk D >></p>
+</div>
+<div class='menu hide' id='my' z-index=1>
+    <p id='music'>my music</p>
+    <p id='photo'>my photos</p>
+    <p id='film'>my films</p>
+</div>
+
+<script type="text/javascript">
+'use strict'
+// context menu
+var coordinats = {
+	menuX : 0,
+	menuY : 0
+};
+
+document.addEventListener('click', onLeftClick, false);
+document.addEventListener('contextmenu', onRightClick, false);
+
+function onLeftClick(e) {
+	var target = e || e.target; // не должно закрываться при клике на меню
+	if (target.className !== ('menu show' || 'menu hide')) {
+		var menu = document.getElementById('context-menu');
+	    menu.className = 'menu hide';
+	}
+}
+
+function onRightClick (e) {
+	e.preventDefault(); 
+	var menu = document.getElementById('context-menu');
+	menu.style.top = event.clientY + 'px';
+	menu.style.left = event.clientX + 'px';
+    menu.className = 'menu show';
+
+    coordinats.menuY = event.clientY;
+    coordinats.menuX = event.clientX;
+    return coordinats;
+}
+// level 2
+
+var menu_comp = document.getElementById('comp'), //TypeError: Cannot call method 'addEventListener' of null
+	disk = document.getElementById('disk');
+
+menu_comp.addEventListener('mouseover', compOver, false); // мышь над пунктом меню. появилось меню
+menu_comp.addEventListener('mouseout', compOut, false);
+disk.addEventListener('mouseover', compOver, false); // мышь над появившемся меню. меню не пропало
+disk.addEventListener('mouseout', compOut, false);
+
+function compOver () {
+	var disk = document.getElementById('disk');
+	var menu = document.getElementById('context-menu');
+	disk.style.top = coordinats.menuY - 160 + 'px'; // ???
+	disk.style.left = coordinats.menuX + 140 + 'px';
+	disk.className = 'menu show';
+}
+
+function compOut () {
+	var disk = document.getElementById('disk');
+	disk.className = 'menu hide';
+}
+
+// level 3
+var diskD = document.getElementById('d'),
+	myFolders = document.getElementById('my');
+
+diskD.addEventListener('mouseover', dOver, false); // мышь над пунктом меню. появилось меню
+diskD.addEventListener('mouseout', dOut, false);
+myFolders.addEventListener('mouseover', dOver, false); // мышь над появившемся меню. меню не пропало
+myFolders.addEventListener('mouseout', dOut, false);
+myFolders.addEventListener('mouseover', compOver, false); // мышь над появившемся меню. предидущее меню не пропало
+myFolders.addEventListener('mouseout', compOut, false);
+
+function dOver () {
+	var diskD = document.getElementById('d');
+	var menu = document.getElementById('context-menu');
+	myFolders.style.top = coordinats.menuY - 200 + 'px'; // ???
+	myFolders.style.left = coordinats.menuX + 280 + 'px';
+	myFolders.className = 'menu show';
+}
+
+function dOut () {
+	var myFolders = document.getElementById('my');
+	myFolders.className = 'menu hide';
+}
+//
+var music = document.getElementById('music'),
+	photo = document.getElementById('photo'),
+	film = document.getElementById('film');
+
+music.addEventListener('click', open, false);
+photo.addEventListener('click', open, false);
+film.addEventListener('click', open, false);
+
+function open () {
+	console.log('you are in a folder with '+this.innerText);
+}
+
+var diskC = document.getElementById('c');
+
+diskC.addEventListener('click', cClick, false);
+
+function cClick () {
+	console.log('Disk C is empty');
+}
+
+var copy = document.getElementById('copy'),
+	cut = document.getElementById('cut'),
+	past = document.getElementById('past');
+
+copy.addEventListener('click', execute, false);
+cut.addEventListener('click', execute, false);
+past.addEventListener('click', execute, false);
+
+function execute () {
+	console.log('Operation '+this.innerText+' completed');
+}
+</script>
+</body>
+</html>
