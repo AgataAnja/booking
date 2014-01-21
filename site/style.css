@@ -1,7 +1,6 @@
 body {
 	background: #facdaa;
 	background: linear-gradient(to left, #ccaa66, #ffffff, #ccaa66);
-		color: 'red';
 }
 
 div {
@@ -29,6 +28,10 @@ li:active {
 	text-indent: 1.5em;
 }
 
+#emblem {
+	width: 100px;
+}
+
 #news {
 	display: block;
 }
@@ -37,6 +40,9 @@ li:active {
 	float: right;
 	padding: 0;
 	color: #ffffff;
+	opacity: 50;
+	background-color: #2fa5e4;
+	display: none;
 }
 
 #title {
