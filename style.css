@@ -1,0 +1,132 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(to bottom, #FFF, #949494, #FFF);
+	background: -webkit-linear-gradient(to bottom, #FFF, #949494, #FFF);
+	background: -moz-linear-gradient(to bottom, #FFF, #949494, #FFF);
+	background: -o-linear-gradient(to bottom, #FFF, #949494, #FFF);
+	margin: 0;
+	height: 100%;
+}
+
+@media screen and (orientation: landscape) { 
+	#logo { 
+		margin: auto;
+		margin-top: 2%;
+		display: block;
+		max-height: 70%;
+	}
+
+	#downloadBtn {
+		margin: auto;
+		margin-top: 5%;
+		display: block;
+		width: 50%;
+		max-height: 25%;
+		width: 50%;
+	}
+
+	#likeBtn, #dislikeBtn, #showBtn, #shareBtn {
+		height: 25%;
+	}
+
+	#header{
+		height: 5%;
+	}
+
+	#viewport {
+		height: 90%;
+	}
+
+	#appView {
+		height: 95%;
+	}
+
+	#navigationPanel {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 42px;
+		background: linear-gradient(to left, #000, #C8C8C8);
+		background: -webkit-linear-gradient(to left, #000, #C8C8C8);
+		background: -moz-linear-gradient(to left, #000, #C8C8C8);
+		background: -o-linear-gradient(to left, #000, #C8C8C8);
+	}
+
+	#likeBtn:active, #dislikeBtn:active, #showBtn:active, #shareBtn:active {
+		background: linear-gradient(to left, #000, #BD3D3D);
+		background: -webkit-linear-gradient(to left, #000, #BD3D3D);
+		background: -moz-linear-gradient(to left, #000, #BD3D3D);
+		background: -o-linear-gradient(to left, #000, #BD3D3D);
+	}
+}
+
+@media screen and (orientation: portrait) { 
+	#downloadBtn, #logo { 
+		margin: 5% 10% 0% 10%;
+		width: 80%;
+	}
+
+	#likeBtn, #dislikeBtn, #showBtn, #shareBtn {
+		width: 25%;
+	}
+
+	#header{
+		height: 5%;
+	}
+
+	#navigationPanel {
+		position: fixed;
+		bottom: 0;
+		height: 42px;
+		width: 100%;
+		background: linear-gradient(to bottom, #000, #C8C8C8);
+		background: -webkit-linear-gradient(to bottom, #000, #C8C8C8);
+		background: -moz-linear-gradient(to bottom, #000, #C8C8C8);
+		background: -o-linear-gradient(to bottom, #000, #C8C8C8);
+	}
+
+	#likeBtn:active, #dislikeBtn:active, #showBtn:active, #shareBtn:active {
+		background: linear-gradient(to bottom, #000, #BD3D3D);
+		background: -webkit-linear-gradient(to bottom, #000, #BD3D3D);
+		background: -moz-linear-gradient(to bottom, #000, #BD3D3D);
+		background: -o-linear-gradient(to bottom, #000, #BD3D3D);
+	}
+}
+
+#logo {
+	border-radius: 10px;
+	border-color: #FFF;
+	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(95%, transparent), to(white));
+}
+
+#closeBtn {
+	color: #FFF;
+	background-color: #CD3916;
+	border-radius: 10px;
+	border-color: #FFF;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 5px;
+}
+
+#downloadBtn {
+	border-radius: 10px;
+	border-color: #FFF;
+	height: 40px;
+}
+
+#downloadLink {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#likeBtn, #dislikeBtn, #showBtn, #shareBtn {
+	background: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
