@@ -1,3 +1,18 @@
+table {
+  table-layout: fixed;
+}
+
+td.ssi-message-cell {
+  vertical-align: top;
+  margin: 0;
+  border: none;
+}
+
+label.ssi-prefix {
+  display: inline-block !important;
+  margin: 10px 0px 20px 0px;
+}
+
 .ssi-container {
   padding: 20px 40px 20px 60px;
   border: 1px #ccc solid;
@@ -7,22 +22,42 @@
   min-height: 100px;
 }
 
-.ssi-menu-link {
-	color: #fdfdfd !important;
+.ssi-form-container {
+  border: 1px #ccc solid;
+  display: block;
+  margin: 0 auto;
+  min-height: 150px;
+  width: 300px;
+  padding: 20px 0px 0px 20px;
 }
 
-.ssi-list {
-	display: inline-block;
+.ssi-menu-link {
+	color: #fdfdfd !important;
 }
 
 .ssi-message {
 	width: 600px;
 	margin: 0 0 10px 10px;
+  border: 1px #eaeaea solid;
+  min-height: 200px;
+  padding: 10px;
 }
 
-/*
-Set !important w/o classes size1-3
-*/
-.ssi-input {
-	width: auto;
+.ssi-note {
+  font-size: 75%;
+}
+
+.ssi-nowrap-note {
+  font-size: 75%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ssi-time-control {
+	width: 50px !important;
+  border: 1px #d9d9d9 solid;
+  padding: 5px;
+  height: 34px;
 }

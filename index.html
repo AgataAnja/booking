@@ -9,37 +9,109 @@
         <script src="js/metro/metro.min.js"></script>
     </head>
     <body class="metro">
-        <nav class="navigation-bar dark">
-		    <nav class="navigation-bar-content">
-		        <item class="element">
-		        	<a href="user_home.html" class="ssi-menu-link">
-		        		<i class="icon-home"></i>
-		        		Semen Semenych
-		        	</a>
-		        </item>
-		        <item class="element-divider"></item>
-		        <item class="element">
-		        	<a href="user_book.html" class="ssi-menu-link">
-		        		Booking
-		        	</a>
-		        </item>
-		        <item class="element">
-		        	<a href="user_msg.html" class="ssi-menu-link">
-		        		<i class="icon-mail-2 fg-yellow"></i> <!--Remove/Add class fg-color depending on existing new messages-->
-		        		Messages
-		        	</a>
-		        </item>
-		        <item class="element place-right">
-		        	<i class="icon-exit"></i>
-		        	Sing Out
-		        </item>
-		    </nav>
-		</nav>
 
-		<!--NOTE: user info-->
-		<div class="ssi-container">
-			<a href="user_home.html">SingIn</a>
+    	<hr>
+
+		<div class="ssi-form-container">
+			<form>
+				<fieldset>
+					<legend>Sing In</legend>
+
+					<label><strong>Username or e-mail</strong></label>
+					<div class="input-control text size3" data-role="input-control">
+						<input type="text" required>
+						<button class="btn-clear" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>Pasword</strong></label>
+					<div class="input-control password size3" data-role="input-control">
+						<input type="password" required>
+						<button class="btn-reveal" tabindex="-1" type="button"></button> 
+					</div>
+
+					<div class="size3 ssi-note"><a href="#">Not registered yet?</a></div>
+
+					<button class="button success place-right" type="submit" style="margin: 5px;">
+						<a href="user_home.html">Sing In</a>
+					</button>
+					</div>
+				</fieldset>
+			</form>
 		</div>
+
+		<hr>
+
+		<div class="ssi-form-container">
+			<form>
+				<fieldset>
+					<legend>Registration</legend>
+
+					<label><strong>Name</strong></label>
+					<div class="input-control text size3" data-role="input-control">
+						<input type="text" placeholder="Name" required>
+						<button class="btn-clear" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>Team</strong></label>
+					<div class="input-control text size3" data-role="input-control">
+						<input type="text" placeholder="Team">
+						<button class="btn-clear" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>E-mail</strong></label>
+					<div class="input-control text size3" data-role="input-control">
+						<input type="text" placeholder="E-mail" required>
+						<button class="btn-clear" tabindex="-1" type="button"></button> <!--on btn click clear field-->
+					</div>
+
+					<label><strong>Pasword</strong></label>
+					<div class="input-control password size3" data-role="input-control">
+						<input type="password" required>
+						<button class="btn-reveal" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>Confirm password</strong></label>
+					<div class="input-control password size3" data-role="input-control">
+						<input type="password" required>
+						<button class="btn-reveal" tabindex="-1" type="button"></button>
+					</div>
+
+					<div class="size3 ssi-note">After submiting this form you will receive confirmation e-mail to entered adress.</div>
+
+					<div class="place-right"> <!--on btn click hide form-->
+						<button class="button warning" style="margin: 5px;">
+							Cancel
+						</button>
+						<button class="button success" type="submit" style="margin: 5px;">
+							Submit
+						</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<hr>
+
+		<div class="ssi-form-container">
+			<form>
+				<fieldset>
+					<legend>Confirmation</legend>
+
+					<label>Are you sure want to do something?</label>
+
+					<div class="place-right"> <!--on btn click hide form-->
+						<button class="button warning" style="margin: 5px;">
+							Cancel
+						</button>
+						<button class="button success" style="margin: 5px;">
+							OK
+						</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<hr>
 
     </body>
 </html>

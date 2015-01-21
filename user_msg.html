@@ -30,47 +30,61 @@
 		        	</a>
 		        </item>
 		        <item class="element place-right">
-		        	<i class="icon-exit"></i>
-		        	Sing Out
+		        	<a href="index.html" class="ssi-menu-link">
+		        		<i class="icon-exit"></i>
+		        		Sing Out
+		        	</a>
 		        </item>
 		    </nav>
 		</nav>
 
 		<!--NOTE: Handle marking msgs-->
 		<div class="ssi-container">
-			<div class="listview ssi-list">
-			    <a href="#" class="list selected">
-			        <div class="list-content">
-			            <span class="icon icon-user"></span>
-			            <div class="data">
-			                <span class="list-title">Angry Admin</span>
-			                <span class="list-remark">You have been added to the ban.</span>
-			            </div>
-			        </div>
-			    </a>
-			 
-			    <a href="#" class="list bg-lightBlue fg-white"> <!--Add class like unreaded and add css rule-->
-			        <div class="list-content">
-			            <span class="icon icon-user-2"></span>
-			            <div class="data">
-			                <span class="list-title">Vasily Alibabaievich</span>
-			                <span class="list-remark">You are dishonest in corporative use of resources. I have to complain about you.</span>
-			            </div>
-			        </div>
-			    </a>
-			 
-			    <a href="#" class="list">
-			        <div class="list-content">
-			            <span class="icon icon-user-3"></span>
-			            <div class="data">
-			                <span class="list-title">Olga Ivanova</span>
-			                <span class="list-remark">Let's play tennis at 17:00.</span>
-			            </div>
-			        </div>
-			    </a>
-			</div>
-
-			<!--<div class="ssi-list ssi-message">Text...</div>-->
+			<table>
+				<tbody>
+					<tr>
+						<td class="span4">
+							<div class="listview">
+							    <a href="#" class="list">
+							        <div class="list-content">
+							            <span class="icon icon-user"></span>
+							            <div class="data">
+							                <span class="list-title">Angry Admin</span>
+							                <span class="list-remark">You have been added to the ban.</span>
+							            </div>
+							        </div>
+							    </a>
+							 
+							    <a href="#" class="list bg-lightBlue fg-white"> <!--Add class like unreaded and add css rule-->
+							        <div class="list-content">
+							            <span class="icon icon-user-2"></span>
+							            <div class="data">
+							                <span class="list-title">Vasily Alibabaievich</span>
+							                <span class="list-remark">You are dishonest in corporative use of resources. I have to complain about you.</span>
+							            </div>
+							        </div>
+							    </a>
+							 
+							    <a href="#" class="list">
+							        <div class="list-content">
+							            <span class="icon icon-user-3"></span>
+							            <div class="data">
+							                <span class="list-title">Olga Ivanova</span>
+							                <span class="list-remark">Let's play tennis at 17:00.</span>
+							            </div>
+							        </div>
+							    </a>
+							</div>
+						</td>
+						<td class="ssi-message-cell span6">
+							<div class="ssi-message">
+								<div><strong>Vasily Alibabaievich</strong></div>
+							    <p>You are dishonest in corporative use of resources. I have to complain about you.</p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>

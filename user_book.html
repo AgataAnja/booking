@@ -30,11 +30,49 @@
 		        	</a>
 		        </item>
 		        <item class="element place-right">
-		        	<i class="icon-exit"></i>
-		        	Sing Out
+		        	<a href="index.html" class="ssi-menu-link">
+                        <i class="icon-exit"></i>
+                        Sing Out
+                    </a>
 		        </item>
 		    </nav>
 		</nav>
+
+        <hr>
+
+        <!--NOTE: Booking edit form. Called by double clk on field/cell-->
+        <div class="ssi-form-container">
+            <form>
+                <fieldset>
+                    <legend>Booking resourse</legend>
+
+                    <label>Tennis at 723 room</label>
+
+                    <div>
+                        <label class="ssi-prefix">From:&nbsp;</label>
+                        <input class="ssi-time-control" type="text" required>
+                        &nbsp;&nbsp;
+                        <label class="ssi-prefix">To:&nbsp;</label>
+                        <input class="ssi-time-control" type="text" required>
+                    </div>
+
+                    <button class="button danger" style="margin: 5px;">
+                            Release
+                        </button>
+
+                    <div class="place-right"> <!--on btn click hide form-->
+                        <button class="button warning" style="margin: 5px;">
+                            Cancel
+                        </button>
+                        <button class="button success" style="margin: 5px;">
+                            OK
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <hr>
 
 		<!--NOTE: Need investigation of streaner so much-->
 		<div class="ssi-container">
@@ -75,18 +113,38 @@
                 </thead>
 
                 <tbody>
-                    <tr><td>8:00 - 8:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>8:30 - 9:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>9:00 - 9:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>9:30 - 10:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>10:00 - 10:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>10:30 - 11:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>11:00 - 11:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>11:30 - 12:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>12:00 - 12:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>12:30 - 13:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>13:00 - 13:30</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
-                    <tr><td>13:30 - 14:00</td><td class="right"> </td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td><td class="right">0,1 Mb</td></tr>
+                    <tr><td>8:00 - 8:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>8:30 - 9:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>9:00 - 9:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>9:30 - 10:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>10:00 - 10:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>10:30 - 11:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>11:00 - 11:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>11:30 - 12:00</td><td class="right bg-teal">
+                            Anton Ivanov
+                            <div class="ssi-nowrap-note">Anna Sergeeva, Ira Alexandrova, Evgen Ivanov</div>
+                        </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>12:00 - 12:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>12:30 - 13:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>13:00 - 13:30</td><td class="right"> </td><td class="right bg-orange" rowspan=2>
+                            Ira Alexandrova
+                            <div class="ssi-nowrap-note">Anton Ivanov, Anna Sergeeva, Ira Alexandrova, Evgen Ivanov</div>
+                        </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>13:30 - 14:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>14:00 - 14:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>14:30 - 15:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>15:00 - 15:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>15:30 - 16:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>16:00 - 16:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>16:30 - 17:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>17:00 - 17:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>17:30 - 18:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>18:00 - 18:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>18:30 - 19:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>19:00 - 19:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>19:30 - 20:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>20:00 - 20:30</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
+                    <tr><td>20:30 - 21:00</td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td><td class="right"> </td></tr>
                 </tbody>
 
                 <tfoot></tfoot>
