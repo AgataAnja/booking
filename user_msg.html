@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/custom-styles.css">
+        <link href="css/iconFont.css" rel="stylesheet">
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery.widget.min.js"></script>
+        <script src="js/metro/metro.min.js"></script>
+    </head>
+    <body class="metro">
+        <nav class="navigation-bar dark">
+		    <nav class="navigation-bar-content">
+		        <item class="element">
+		        	<a href="user_home.html" class="ssi-menu-link">
+		        		<i class="icon-home"></i>
+		        		Semen Semenych
+		        	</a>
+		        </item>
+		        <item class="element-divider"></item>
+		        <item class="element">
+		        	<a href="user_book.html" class="ssi-menu-link">
+		        		Booking
+		        	</a>
+		        </item>
+		        <item class="element">
+		        	<a href="user_msg.html" class="ssi-menu-link">
+		        		<i class="icon-mail-2 fg-yellow"></i> <!--Remove/Add class fg-color depending on existing new messages-->
+		        		Messages
+		        	</a>
+		        </item>
+		        <item class="element place-right">
+		        	<i class="icon-exit"></i>
+		        	Sing Out
+		        </item>
+		    </nav>
+		</nav>
+
+		<!--NOTE: Handle marking msgs-->
+		<div class="ssi-container">
+			<div class="listview ssi-list">
+			    <a href="#" class="list selected">
+			        <div class="list-content">
+			            <span class="icon icon-user"></span>
+			            <div class="data">
+			                <span class="list-title">Angry Admin</span>
+			                <span class="list-remark">You have been added to the ban.</span>
+			            </div>
+			        </div>
+			    </a>
+			 
+			    <a href="#" class="list bg-lightBlue fg-white"> <!--Add class like unreaded and add css rule-->
+			        <div class="list-content">
+			            <span class="icon icon-user-2"></span>
+			            <div class="data">
+			                <span class="list-title">Vasily Alibabaievich</span>
+			                <span class="list-remark">You are dishonest in corporative use of resources. I have to complain about you.</span>
+			            </div>
+			        </div>
+			    </a>
+			 
+			    <a href="#" class="list">
+			        <div class="list-content">
+			            <span class="icon icon-user-3"></span>
+			            <div class="data">
+			                <span class="list-title">Olga Ivanova</span>
+			                <span class="list-remark">Let's play tennis at 17:00.</span>
+			            </div>
+			        </div>
+			    </a>
+			</div>
+
+			<!--<div class="ssi-list ssi-message">Text...</div>-->
+		</div>
+	</body>
+</html>

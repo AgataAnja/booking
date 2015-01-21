@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Test_app</title>
-		<link href="style.css" rel="stylesheet">
-		<script type="text/javascript" src="response.js"></script>
-		<script type="text/javascript" src="mediator.js"></script>
-    	<script type="text/javascript" src="app.js"></script>
-	</head>
+    <head>
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/custom-styles.css">
+        <link href="css/iconFont.css" rel="stylesheet">
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery.widget.min.js"></script>
+        <script src="js/metro/metro.min.js"></script>
+    </head>
+    <body class="metro">
+        <nav class="navigation-bar dark">
+		    <nav class="navigation-bar-content">
+		        <item class="element">
+		        	<a href="user_home.html" class="ssi-menu-link">
+		        		<i class="icon-home"></i>
+		        		Semen Semenych
+		        	</a>
+		        </item>
+		        <item class="element-divider"></item>
+		        <item class="element">
+		        	<a href="user_book.html" class="ssi-menu-link">
+		        		Booking
+		        	</a>
+		        </item>
+		        <item class="element">
+		        	<a href="user_msg.html" class="ssi-menu-link">
+		        		<i class="icon-mail-2 fg-yellow"></i> <!--Remove/Add class fg-color depending on existing new messages-->
+		        		Messages
+		        	</a>
+		        </item>
+		        <item class="element place-right">
+		        	<i class="icon-exit"></i>
+		        	Sing Out
+		        </item>
+		    </nav>
+		</nav>
 
-	<body>
-		<header id="header"><center>Powered by <em>LoopMe</em></center></header>
-		<section id="viewport"></section>
-	</body>
+		<!--NOTE: user info-->
+		<div class="ssi-container">
+			<a href="user_home.html">SingIn</a>
+		</div>
+
+    </body>
 </html>

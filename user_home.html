@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/custom-styles.css">
+        <link href="css/iconFont.css" rel="stylesheet">
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery.widget.min.js"></script>
+        <script src="js/metro/metro.min.js"></script>
+    </head>
+    <body class="metro">
+        <nav class="navigation-bar dark">
+		    <nav class="navigation-bar-content">
+		        <item class="element">
+		        	<a href="user_home.html" class="ssi-menu-link">
+		        		<i class="icon-home"></i>
+		        		Semen Semenych
+		        	</a>
+		        </item>
+		        <item class="element-divider"></item>
+		        <item class="element">
+		        	<a href="user_book.html" class="ssi-menu-link">
+		        		Booking
+		        	</a>
+		        </item>
+		        <item class="element">
+		        	<a href="user_msg.html" class="ssi-menu-link">
+		        		<i class="icon-mail-2 fg-yellow"></i> <!--Remove/Add class fg-color depending on existing new messages-->
+		        		Messages
+		        	</a>
+		        </item>
+		        <item class="element place-right">
+		        	<i class="icon-exit"></i>
+		        	Sing Out
+		        </item>
+		    </nav>
+		</nav>
+
+		<!--NOTE: user info-->
+		<div class="ssi-container">
+			<legend>User info</legend>
+
+			<div>
+				<span><strong>Name:&nbsp;</strong></span>
+				<span>Semen Semenych</span>
+			</div>
+
+			<div>
+				<span><strong>Team:&nbsp;</strong></span>
+				<span>Ipswitch</span>
+			</div>
+
+			<div>
+				<span><strong>E-mail:&nbsp;</strong></span>
+				<span>ssemen@softserveinc.com</span>
+			</div>
+
+			<button class="button place-bottom-right large default" style="margin: 5px;">
+				Edit user data
+			</button> <!--on btn click show form-->
+		</div>
+
+		<!--NOTE: user info edit/registration form (hidden on default, visible on edit button click)-->
+		<!--Handle Enter btn press and btns press. Canceled page restarting (Commented)-->
+		<!--Need validation-->
+		<div class="ssi-container">
+			<!--<form>-->
+				<!--<fieldset>-->
+					<legend>Editing user info</legend>
+
+					<label><strong>Name</strong></label>
+					<div class="input-control text size3 ssi-input" data-role="input-control">
+						<input type="text" placeholder="Semen Semenych">
+						<button class="btn-clear" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>Team</strong></label>
+					<div class="input-control text size3 ssi-input" data-role="input-control">
+						<input type="text" placeholder="Ipswitch">
+						<button class="btn-clear" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>E-mail</strong></label>
+					<div class="input-control text size3 ssi-input" data-role="input-control">
+						<input type="text" placeholder="ssemen@softserveinc.com">
+						<button class="btn-clear" tabindex="-1" type="button"></button> <!--on btn click clear field-->
+					</div>
+
+					<label><strong>Pasword</strong></label>
+					<div class="input-control password size3 ssi-input" data-role="input-control">
+						<input type="password">
+						<button class="btn-reveal" tabindex="-1" type="button"></button> 
+					</div>
+
+					<label><strong>Confirm password</strong></label>
+					<div class="input-control password size3 ssi-input" data-role="input-control">
+						<input type="password">
+						<button class="btn-reveal" tabindex="-1" type="button"></button>
+					</div>
+
+					<span class="place-bottom-right"> <!--on btn click hide form-->
+						<button class="button large warning" style="margin: 5px;">
+							Cancel
+						</button>
+						<button class="button large success" style="margin: 5px;">
+							Save
+						</button> <!--maybe it will be changed on submit-->
+					</span>
+				<!--</fieldset>-->
+			<!--</form>-->
+		</div>
+
+		<!--NOTE: notifications-->
+		<div></div>
+
+    </body>
+</html>
